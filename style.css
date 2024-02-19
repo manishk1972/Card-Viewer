@@ -1,0 +1,67 @@
+.card {
+    position: fixed;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 10px 10px 10px 10px;
+    bottom: 15px;
+    max-width: 250px;
+    height: fit-content;
+}
+
+@media (min-width: 100px) {
+    .card {
+        left: 5px;
+        max-width: 30%;
+        height: fit-content;
+    }
+}
+
+@media (min-width: 300px) {
+    .card {
+        left: 10px;
+        max-width: 35%;
+        height: fit-content;
+    }
+}
+
+@media (min-width: 568px) {
+    .card {
+        left: 25px;
+        max-width: 30%;
+        height: fit-content;
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        left: 25px;
+        max-width: 25%;
+        height: fit-content;
+    }
+}
+
+@media (min-width: 1000px) {
+    .card {  
+        left: 25px;
+        max-width: 20%;
+        height: fit-content;
+    }
+}
+
+@media (min-width: 1500px) {
+    .card {        
+        left: 35px;
+        max-width: 17%;
+        height: fit-content;
+    }
+}
+
+@media (min-width: 1700px) {
+    .card {        
+        left: 35px;
+        max-width: 10%;
+        height: fit-content;
+    }
+}
