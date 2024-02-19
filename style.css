@@ -1,7 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    /* background-image: url('https://i.ibb.co/R9vQhjF/Screenshot-512.png'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -9,6 +8,7 @@ body {
 }
 
 .card {
+    display: none;
     position: fixed;
     background-color: #ffffff;
     box-shadow: 0px 20px 40px 0px #00000040;
@@ -16,8 +16,32 @@ body {
     border-radius: 10px 10px 10px 10px;
     bottom: 25px;
     max-width: 250px;
-    height: fit-content;  
+    height: fit-content; 
+    transition: height 0.3s; 
     z-index: 9999; 
+}
+
+.card:hover {
+    height: auto; 
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 9999; 
+    padding: 3px; 
+    cursor: pointer;
+    font-size: 20px; 
+    /* background: red; */
+    border-radius: 50%;
+    line-height: 1;
+    visibility: hidden; 
+    transition: visibility 0.3s;
+}
+
+.card:hover .close {
+    visibility: visible; 
 }
 
 #lottie-container {
