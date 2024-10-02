@@ -4,44 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <link rel="stylesheet" href="style.css" />
+        <!-- <link rel="stylesheet" href="style.css" /> -->
     </head>
     <body>
-        <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.7.4"></script>
-        <div class="card" id="card">
-            <span class="close" id="close">🗙</span>
-            <div id="lottie-container"></div>
-            <script>
-                async function fetchData() {
-                    try {
-                        const response = await fetch("https://sp-outjson.s3.amazonaws.com/com/NIKE1.json");
-                        const animationData = await response.json();
-
-                        const animationContainer =
-                            document.getElementById("lottie-container");
-                        const anim = lottie.loadAnimation({
-                            container: animationContainer,
-                            renderer: "svg",
-                            loop: true,
-                            autoplay: true,
-                            animationData: animationData,
-                        });
-
-                        // Show the card after the video has been loaded
-                        document.getElementById("card").style.display = "block";
-
-                        // Close card when close icon is clicked
-                        const closeBtn = document.getElementById("close");
-                        closeBtn.addEventListener("click", () => {
-                            document.getElementById("card").style.display =
-                                "none";
-                        });
-                    } catch (error) {
-                        console.error(error);
-                    }
-                }
-                fetchData();
-            </script>
-        </div>
+        <div id="root"></div>
+        <script src="./Bundle.js"></script>
     </body>
 </html>
